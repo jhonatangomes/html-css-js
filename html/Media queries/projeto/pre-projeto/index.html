@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/media-query.css">
+</head>
+<body onresize="mundouTamanho()">
+    <header>
+        <h1>Meu Site</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptate et iusto maiores fuga libero quasi minus. Suscipit asperiores dolorum sit quasi cupiditate? Architecto, ipsam minima possimus velit ab neque!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, deleniti. Nemo tenetur eligendi earum. Itaque repudiandae et alias veritatis ullam. Rerum tenetur nobis repellat voluptate ratione corrupti repellendus iure mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptas aliquam adipisci magnam suscipit eveniet officia vero tempore explicabo quaerat in, pariatur dolor dolorem molestiae qui quisquam ad corrupti quasi.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid enim officiis, tempora similique soluta fugit, at eveniet exercitationem amet voluptates consequatur? Adipisci excepturi, quibusdam quos tempore modi aliquam quasi ex.</p>
+        </article>
+    </main>
+    <script>
+        function mundouTamanho() {
+            if(window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if(itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p><label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome">
+            </p>
+            <p><label for="isobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="isobrenome">
+            </p>
+            <p>
+                <label for="imedia">Média</label>
+                <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" value="5" required>
+            </p>
+            <p>
+                <label for="imes">Período Letivo</label>
+                <input type="month" name="mes" id="imes" value="2020-05">
+            </p>
+            <p>
+               <label for="idia">Dia da Prova</label>
+               <input type="date" name="Dia" id="idia" value="2022-03-14">
+            </p>
+            <p>
+                <label for="ihora">Horário da Prova</label>
+                <input type="time" name="hora" id="ihora" value="03:02">
+            </p>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" required placeholder="Digte seu E-mail">
+            </p>
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="itel" id="itel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx) xxxxx-xxxx">
+            </p>
+            <p>
+                <label for="iusu">Usuário: </label>
+                <input type="text" name="usu" id="iusu" required minlength="8" placeholder="Digite o usuário">
+            </p>
+            <p>
+                <label for="isen">Senha: </label>
+                <input type="password" name="sen" id="isen" required minlength="8" maxlength="15" placeholder="Digite sua senha">
+            </p>
+        </fieldset>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+    </form>
+
+    <!-- Esportes Favoritos-->
+     <form action="cadastro.php" method="get">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmasc" value="M">
+            <label for="isxmasc">Masculino</label>
+            <input type="radio" name="sexo" id="isxfem" value="F">
+            <label for="isxfem">Feminino</label>
+        
+        </fieldset>
+         <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas">
+            <label for="iesbas">Basqutes</label>
+            <input type="checkbox" name="esfut" id="iesfut" checked>
+            <label for="iesfut">Futebol</label><br>
+            <input type="checkbox" name="esnat" id="iesnat">
+            <label for="iesnat">Natação</label>
+            <input type="checkbox" name="esten" id="iesten">
+            <label for="iesten">Tênis</label>
+         </fieldset>
+         <fieldset>
+            <legend>Pesquisa de Satisfação</legend>
+            <p>
+                <label for="inivel">Nível de Satisfação</label>
+                <input type="range" name="nivel" id="inivel" min="1" max="10" value="5">
+            </p>
+            <p>
+                <label for="ifoto">Foto do Perfil</label>
+                <input type="file" name="Foto" id="ifoto">
+            </p>
+         </fieldset>
+         <fieldset>
+            <p>
+                <label for="iest">Estado</label>
+                <select name="Estado" id="iest">
+                    <option value="" select>---- Escolha ----</option>
+                    <optgroup label="Região Sudeste">
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janairo</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste">
+                        <option value="MA">Maranhão</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                    </optgroup>
+            </p>
+            </select>
+            <p>
+                <label for="iprof">Profissão</label>
+                <input type="text" name="prof" id="iprof" list="lstprof">
+                <datalist id="lstprof">
+                    <option>Administrador</option>
+                    <option>Contabilista</option>
+                    <option>Desenvolvedor</option>
+                    <option>Professor</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="imsg">Mensagem: </label>
+                <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            </p>
+         </fieldset>
+            <p>
+                <input type="submit" value="Concluído">
+                <input type="reset" value="Limar">
+            </p>
+     </form>
+</body>
+</html>

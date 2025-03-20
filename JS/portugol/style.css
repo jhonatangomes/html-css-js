@@ -1,0 +1,9 @@
+body{
+    justify-items: center;
+}
+div{
+    background-color: rgb(187, 223, 223);
+    text-align: center;
+    padding: 20px 80px;
+    margin: 10px;
+}

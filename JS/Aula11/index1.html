@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASCIONALIDADE</title>
+</head>
+<body>
+    <h1>Nascionalidade</h1>
+    <p>Qual a sua Nascionalidade? <input type="text" id="nas"></p>
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+    <script>      
+        function verificar() {
+            var txtv = window.document.getElementById('nas')
+            var res = window.document.querySelector('div#res')
+            var nas = (txtv.value)
+            res.innerHTML = `<p>Sua nascionalidade é  <strong>${nas}</strong></p>`
+            if (nas == 'BRASIL') {
+                res.innerHTML += `<p>Você é <strong>BRASILEIRO</strong></p>`
+            }else{
+                res.innerHTML += `<P>Você não é BRASILEIRO</P>`
+            }
+            res.innerHTML += `<p>Você jdgaksdhkagdhk sdvas</p>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis</title>
+    <style>
+        input{
+            padding: 15px;
+        }
+
+        #test{
+            background-color: rgba(0, 0, 0, 0.137);
+            text-align: center;
+            height: 50px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+        button{
+            width: 200px;
+            height: 100px;
+        }
+        .start{
+            background-color: green;
+        }
+        .stop{
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <h1>Variáveis</h1>
+    <P>Trabalhando Variáveis</P>
+    <div>
+        <p>Criando formulário</p>
+        <input type="text" name="nome" id="nome">
+        <input type="text" name="SobreNome" id="sobreN">
+        <input type="button" value="Salvar" onclick="salvar()">
+    </div>
+
+    <div id="res">
+
+    </div>
+    <br><br>
+    <!-- IF E ELSE 1 -->
+
+    <div id="resposta">
+    </div>
+
+    <!-- IF E ELSE 2 -->
+    <br><br>
+    
+    <h1>IF e ELSE</h1>
+    <div>
+        <P id="teste">Texto</P>
+
+        <input type="text" name="nome" id="nomes" placeholder="Digite seu nome">
+        <input type="button" value="Verificar" onclick="verificar()">
+    </div>
+    
+    <!-- Switch -->
+
+    <h1>Switch Cor</h1>
+    <div>
+        <div id="test"></div>
+
+        <input type="text" name="cor" id="cor" placeholder="Digite uma cor">
+        <input type="button" value="Verificar Cor" onclick="verificaCor()">
+    </div>
+
+    <h1>Switch Data</h1>
+    <div>
+        <p>Dia Da Semana</p>
+        <div id="testee"></div>
+
+        <input type="button" value="Verificar Data" onclick="diaDaSemana()">
+    </div>
+    <br><br>
+    <!-- FOR -->
+    <select id="ano">
+        <option selected disabled>Selecione o ano</option>
+    </select>
+
+
+    <!-- EVENTO DE TEMPO  setTimeout / setInterval-->
+
+    <h2>Controle de Tempo</h2>
+    <h3 id="tempo">10</h3>
+    <button onclick="ativarContagem()" class="start">Ativar Contagem</button>
+    <button onclick="pararContagem()" class="stop">Parar Contagem</button>
+
+    <div>
+        <h1>JSON</h1>
+        <pre id="area"></pre>
+    </div> 
+
+    
+    <script src="variaveis.js">
+
+    </script>
+    
+</body>
+</html>
