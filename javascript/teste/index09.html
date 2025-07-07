@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <p>Nome do funcionário
+        <input type="text" name="" id="nome">
+    </p>
+    <p>Salário
+        <input type="number" name="" id="salario">
+    </p>
+    <p>Reajuste
+        <input type="number" name="" id="reajuste">
+    </p>
+    <button  onclick="salvar()">salvar</button>
+    <div id="res"></div>
+    <script>
+        function salvar() {
+            var nome = document.getElementById('nome').value
+            var salario = document.getElementById('salario')
+            var reajuste = document.getElementById('reajuste')
+            var res = document.getElementById('res')
+            
+            var sal = Number(salario.value)
+            var rea = Number(reajuste.value)
+
+            var aumento = sal + (sal * rea / 100)
+
+            res.innerText = `${nome} ganhava ${sal}`
+            res.innerText += ` E depois de ganhar ${rea}% de aumento vai passar a ganhar ${aumento}`
+        
+        }
+    </script>
+</body>
+</html>

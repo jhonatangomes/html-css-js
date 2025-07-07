@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="preco" placeholder="Preço do produto">
+    <input type="button" value="Clicar" onclick="clicar()">
+    <div id="res"></div>
+    <script>
+        function clicar(){
+            var tn1 = document.getElementById('preco')
+            var r = document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var desc = n1 - (n1*30/100);
+           // r.innerText = `Preço do produto: R$ ${n1}`
+           
+            r.innerText = 'Preço do produto: ' + n1.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'}) //'USD' 'EUR'
+            r.style.background = 'green'
+            //r.innerText = 'O valor com desconto é R$' + desc.toFixed(2)
+
+        }
+    </script>
+</body>
+</html>

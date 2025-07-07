@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Tabuada</title>
+</head>
+<body>
+    <p>--------------------------------</p>
+    <h1>Super Tabuada</h1>
+    <p>--------------------------------</p>
+    <p>+ Adição</p>
+    <p>- Subtração</p>
+    <p>* Multiplicação</p>
+    <p>/ Divisão</p>
+    <input type="number" name="" id="opcao" oninput="salvar()">
+    <!--<input type="button" value="Somar" onclick="salvar()">-->
+    <div id="res"></div>
+
+    <script>
+    function salvar() {   
+        var opcao = document.getElementById('opcao')
+        var res = document.getElementById('res')
+        var opcao = Number(opcao.value)
+
+        
+        switch(opcao) {
+            case 1:
+                //window.prompt ('Digite um numero')
+                window.prompt ('Digite 2 numero')
+            break
+            case 2:
+                window.prompt ('Digite 2 numero') 
+            break
+            default :
+                window.alert ('digiet')
+        }
+                res.innerHTML = `Voce escolheu a opção ${opcao} <br>`
+                window.prompt ('Digite um numero')
+                window.prompt ('Digite 2 numero')
+        switch (opcao) {
+            case 1:
+                res.innerHTML += 'A soma é'  
+               break
+            case 2:
+                res.innerHTML += 'A subtração é'
+                break
+            case 3:
+                res.innerHTML += 'A multiplcaçaõ é'
+                break
+            case 4:
+                res.innerHTML += 'A divisão é'
+                break
+            default:
+                res.innerHTML += '[ERRO!] sua operação não pode ser realizada.'
+        }
+        
+    }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="datetime" name="" id="data">
+    <button onclick="salvar()">ano</button>
+    <div id="res"></div>
+    <script>
+        function salvar() {
+            var data = document.getElementById('data')
+            var res = document.getElementById('res')
+        
+            var y = new Date()
+            var d = y.getFullYear()
+            //var d = y.getTime()
+            var ano = d - Number(data.value)
+            res.innerHTML = `Sua idade atual é ${ano} anos`
+            if (ano < 18) {
+                res.innerHTML += '<br>Você não pode se alistar'
+            } else {
+                res.innerHTML += '<br>Você deve se alistar'
+            }
+
+        }
+        
+
+    </script>
+</body>
+</html>

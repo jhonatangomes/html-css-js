@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Primeira nota: 
+        <input type="number" name="" id="nota1">
+    </p>
+    <p>Segunda nota: 
+        <input type="number" name="" id="nota2">
+    </p>
+    <p>
+        <button onclick="salvar()">Calcular</button>
+    </p>
+    <div id="res"></div>
+    <script>
+        function salvar () {
+            var nota1 = document.getElementById('nota1')
+            var nota2 = document.getElementById('nota2')
+            var res = document.getElementById('res')
+
+            var nota1 = Number.parseFloat(nota1.value)
+            var nota2 = Number.parseFloat(nota2.value)
+            var media = (nota1 + nota2) / 2
+            
+            res.innerHTML = ('------------RESULTADOS-------------<br>')
+            res.innerHTML += (`As notas do aluno foram ${nota1}  e ${nota2}<br>`)
+            res.innerHTML += (`A média final é ${media}`)
+        
+        }
+    </script>
+</body>
+</html>

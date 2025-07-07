@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Quantos números você quer me informar? 
+        <input type="number" name="" id="tot">
+    </p>
+    <input type="button" value="Contar" onclick="c()">
+    <div id="res">
+        <img id="img" src="" alt="">
+    </div>
+    <script>
+        function c() {
+            var tot = document.getElementById('tot').value
+            var res = document.getElementById('res')
+            var img = document.getElementById('img')
+            c = 1
+            var s = 0
+            while (c <= tot) {
+                res.innerHTML = '<input Digite um número id="n">'
+                var n = document.getElementById ('n').value
+                var s = s + n 
+                c++
+                
+            }
+            img.src = 'fotos/01.jpg'
+            document.body.style.background = 'red'     
+        } 
+    </script>
+</body>
+</html>

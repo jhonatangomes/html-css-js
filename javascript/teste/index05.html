@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><input type="number" name="" id="num1"></p>
+    <p><input type="number" name="" id="num2"></p>
+    <p><button onclick="clicar()">Calcular</button></p>
+    <div id="resposta"></div>
+    <script>
+        function clicar() {
+            //saida de dados
+            var num1 = document.getElementById('num1')
+            var num2 = document.getElementById('num2')
+            var resposta = document.getElementById('resposta')
+            //os resultados
+            var num1 = Number.parseInt(num1.value)
+            var num2 = Number.parseInt(num2.value)
+
+            var soma = num1 + num2
+            var sub = num1 - num2
+            var mult = num1 * num2
+            var div = (num1) / (num2)
+            var divr = (num1) / (num2)
+            var resto = num1 % num2
+            //Oq serão mostrado
+            resposta.innerHTML = ('A soma é = ' + soma + '<br>')
+            resposta.innerHTML +=('A diferença = ' + sub + '<br>')
+            resposta.innerHTML +=('A produto = ' + mult + '<br>')
+            resposta.innerHTML +=(`A divisão inteira = ${div}<br>`)
+            resposta.innerHTML +=(`A divisão real = ${divr}<br>`)
+            resposta.innerHTML +=(`O resto da divisão = ${resto}<br>`)
+        }
+
+
+    </script>
+</body>
+</html>

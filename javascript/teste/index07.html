@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Um litro de tinta 2m²</p>
+    <p>A lagura da parade:
+        <input type="number" name="" id="par1">
+    </p>
+    <p>A Altura da parade:
+        <input type="number" name="" id="par2">
+    </p>
+    <button onclick="somar()">Somar</button>
+    <div id="res"></div>
+    <script>
+        function somar (){
+            var par1 = document.getElementById('par1')
+            var par2 = document.getElementById('par2')
+            var res = document.getElementById('res')
+
+            var par1 = Number(par1.value)
+            var par2 = Number(par2.value)
+
+            var med = par1 * par2
+            var lata = med / 2
+            res.innerHTML = `Uma parede ${par1.toFixed(1)} x ${par2.toFixed(1)} tem uma área de ${med.toFixed(1)} M²</br>`
+            res.innerText += `Precisaremos de ${lata} latas de tintas`
+        } 
+
+    </script>
+</body>
+</html>

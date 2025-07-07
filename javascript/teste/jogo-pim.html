@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Jogo do PIM</h1>
+    <p>----------------------------------</p>
+    <h2>Jogo do PIM</h2>
+    <p>----------------------------------</p>
+    <p>Quer contar até quantos? 
+        <input type="number" name="" id="num">
+    </p>
+    <input type="button" value="Contador" onclick="contar()">
+    <div id="res"></div>
+    <script>
+        function contar(){
+            var num = document.getElementById('num').value
+            var res = document.getElementById('res')
+            //var num = Number.parseInt(num.value)
+            let total = 1
+            while (total <= num) {
+                
+                if (total % 4 != 0) {
+                    res.innerHTML += ` ${total} `
+                }else {
+                    res.innerHTML += '<strong>PIM!</strong>'
+                }
+                
+                total ++
+            }
+            res.innerHTML += '<br><br> FIM'
+            document.body.style.background = 'green'
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício</h1>
+    <p>
+        Quantos números você quer me informar? 
+        <input type="number" name="" id="num">
+    </p>
+    <input type="button" value="Contar" onclick="contar()">
+    <div id="res"></div>
+    <script>
+        function contar () {
+            var num = document.getElementById ('num').value
+            var res = document.getElementById ('res')
+            c = 1
+            s = 0
+            while (c <= num) {
+                var n = window.prompt('Digite um número:')
+                var s = Number(s) + Number(n)
+                c ++
+            }
+            res.innerHTML = `A soma foi de ${s}`
+        }
+    </script>
+</body>
+</html>

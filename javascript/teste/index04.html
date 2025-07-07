@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antecessor</title>
+</head>
+<body>
+    <input type="number" name="" id="num">
+    <input type="button" value="Clicar" onclick="clicar()">
+    <div id="res"></div>
+    <script>
+        function clicar (){
+            var num = document.getElementById('num').value
+            var res = document.getElementById('res')
+            
+            res.innerHTML = (`O antecessor de ${num} é o valor ${num - 1}<br>`)
+            res.innerHTML +=(`O sucessor de ${num} é o valor ${Number(num) + 1}`)
+        }       
+    </script>   
+</body>
+</html>

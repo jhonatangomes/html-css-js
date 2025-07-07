@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Qual o valor de sua compra? 
+        <input type="number" name="" id="valor">
+    </p>
+    <button onclick="salvar()">salvar</button>
+    <div id="res"></div>
+    
+    <script>
+        function salvar () {
+            var valor = document.getElementById('valor').value
+            var res = document.getElementById('res')
+
+            var desc = valor * 10 / 100
+            var total = valor - (valor * 10 / 100)
+
+            if (valor < 500) {
+                res.innerHTML = `Você comprou ${valor} em nossa loja. OBRIGADO!`
+            } else {
+                res.innerHTML = '================ ATENÇÃO ==============<br>'
+                res.innerHTML += `Você comprou ${valor} em compra. Você vai receber ${desc} de desconto <br>`
+                res.innerHTML += `O valor a ser pago é <strong>${total}</strong>. Volte sempre!`
+            }
+        }
+    </script>
+</body>
+</html>

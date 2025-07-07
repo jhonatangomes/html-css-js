@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrosel</title>
+</head>
+<body>
+    <h1>Fotos</h1>
+    <div id="res">
+        <img id="carrosel" src="fotos/01.jpg" alt="fotos" width="150px">
+    </div>
+    <button onclick="c()">proximo</button>
+    <script>
+        function c(){
+            var img = document.getElementById('carrosel')
+            var res = document.getElementById('res')
+            img.src = 'fotos/02.jpg'
+            res.style.background = '#031E96'
+           
+        } //setTimeout;200;
+        
+    </script>
+</body>
+</html>

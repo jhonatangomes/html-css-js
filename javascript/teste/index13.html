@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Digite os números</h1>
+    <p> Início
+        <input type="number" name="" id="conte">
+    </p>
+    <p>Fim
+        <input type="number" name="" id="term">
+    </p>
+    <p>Incremente
+        <input type="number" name="" id="incre">
+    </p>
+    <input type="button" value="Contar" onclick="contar()">
+
+    <div id="res"></div>
+    <script>
+        
+
+        function contar() {
+            
+            var conte = document.getElementById('conte')
+            var term = document.getElementById('term')
+            var incre = document.getElementById('incre')
+            var res = document.getElementById('res')
+
+            var c = Number(conte.value)
+            var t = Number(term.value)
+            var i = Number(incre.value)
+
+            
+
+            if (i <= 0){
+                alert ("Por favor, insira um incremente maior q zero.")
+                return;
+            } 
+            res.innerHTML = "<strong>Contador </strong> <br>"
+             while (c <= t) {
+                    res.innerHTML += `${c} `
+                c += i    
+             }
+             
+        }
+    </script>
+</body>
+</html>

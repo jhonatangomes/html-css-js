@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>
+        Texte
+    </h1>
+    <p>Nome
+        <input type="text" name="" id="nome">
+    </p>
+    <p>Data de nascimento
+        <input type="datetime" name="" id="data">
+    </p>
+    <p>Salário
+        <input type="number" name="" id="salario">
+    </p>
+    <p><input type="button" value="Salvar" onclick="salvar()"></p>
+
+    <script>
+        function salvar () {
+            var nome = document.getElementById('nome').value
+            var data = document.getElementById('data').value
+            var salario = document.getElementById('salario').value
+            
+            //data = 2025-Number(data.value)
+
+            document.write ('---------- FICHA FUNCIONAL ---------</br>')
+            document.write ('</br>Nome ' + nome)
+            document.write ('</br>Nascimento ' + data)
+            document.write ("</br><font color ='red'>Salário " + salario)
+            
+        }
+
+    </script>
+
+</body>
+</html>

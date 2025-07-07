@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        div {
+            height: 25px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" name="" id="nota1" placeholder="nota 1">
+    <br>
+    <input type="number" name="" id="nota2" placeholder="nota 2">
+    <input type="button" value="Resultado" onclick="res()">
+    <div id="r"></div>
+    <script>
+        
+        function res(){
+            var tn1 = document.getElementById('nota1')
+            var tn2 = document.getElementById('nota2')
+            var r = document.getElementById('r')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var soma = n1 + n2;
+            var media = (n1 + n2) / 2;
+            r.innerText = `A soma é ${soma} e a média é ${media}`
+            //r.style.background = 'green'
+            //r.style.padding = '50px'
+           // r.innerText = `A média é ${media}`
+           //r.innerText = 'A soma é ' + soma.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        }
+        
+
+    </script>
+</body>
+</html>

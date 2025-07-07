@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade de Votação</title>
+</head>
+<body>
+    <h1>Idade de votação</h1>
+    <p>Digite sua idade:
+        <input type="number" name="" id="idade">
+    </p>
+    
+    <input type="button" value="verificar" onclick="clicar()">
+    
+    <div id="res">
+        <img id="ft" src="" alt="">
+    </div>
+    
+    <script>
+        function clicar() {
+            var idade = document.getElementById('idade')
+            var res = document.getElementById('res')
+            var ft = document.getElementById('ft')
+            var idade = Number(idade.value)
+
+            if (idade < 16) {
+                res.innerHTML = `Sua idade é ${idade}. Você não vota`
+                ft.src = 'fotos/01.jpg'
+                document.body.style.background = 'green'
+            } else if(idade < 18 || idade > 64){
+                res.innerHTML = 'Voto opcional'
+                ft.src = 'fotos/02.jpg'
+                document.body.style.background = 'red'
+            }else {
+                res.innerHTML = 'Voto Obrigatório'
+                ft.src = 'fotos/02.jpg'
+                document.body.style.background = 'blue'
+            }
+            res.appendChild (ft)
+        }
+    </script>
+</html>
